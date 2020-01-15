@@ -2,8 +2,38 @@
 <html>
 	<head>
 		<title>Hello World!</title>
+		<script src="jquery.min.js"></script>
+		<script src="jquery.flipping_text.js"></script>
+		<style>
+			html, body {
+				background: #400134;
+				height: 100%;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			h1 {
+				color: #1A98B5;
+				text-align: center;
+				display: block;
+				top: 50%;
+				left: 50%;
+				position: absolute;
+				transform: translate(-50%, -100%);
+				font-size: 150px;
+				width: 100%;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Hello World!</h1>
+		<h1 class="helloworld">Hello World! :)</h1>
 	</body>
+	<script>
+		$(document).ready(function(){
+			$(".helloworld").flipping_text({
+				tickerTime: 75, 
+				opacityEffect: true, 
+			});
+		});
+	</script>
 </html>
