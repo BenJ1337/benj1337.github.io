@@ -34,6 +34,23 @@
 				tickerTime: 75, 
 				opacityEffect: true, 
 			});
+			
+			function loop() {   
+			    var smile = $(".ft_char13");
+			    if(smile !== undefined && $(smile).attr("style") == "opacity: 1;") {
+			      	if($(smile).text() == ":") {
+			      		$(smile).text(";");
+						setTimeout(loop, 500);
+						return;
+			      	} else {
+			      		$(smile).text(":");
+						setTimeout(loop, 750);
+						return;
+			      	}
+			    }
+				setTimeout(loop, 1500);
+			}
+			loop();
 		});
 	</script>
 </html>
