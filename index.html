@@ -6,22 +6,23 @@
 		<script src="jquery.flipping_text.js"></script>
 		<style>
 			html, body {
-				background: #400134;
+				background: #ddd;
 				height: 100%;
 				width: 100%;
 				padding: 0;
 				margin: 0;
 			}
 			h1 {
-				color: #1A98B5;
+				color: #333;
 				text-align: center;
 				display: block;
 				top: 50%;
 				left: 50%;
 				position: absolute;
 				transform: translate(-50%, -100%);
-				font-size: 150px;
+				font-size: 30px;
 				width: 100%;
+				font-family: "Courier New";
 			}
 		</style>
 	</head>
@@ -31,20 +32,20 @@
 	<script>
 		$(document).ready(function(){
 			$(".helloworld").flipping_text({
-				tickerTime: 75, 
-				opacityEffect: true, 
+				tickerTime: 75,
+				opacityEffect: true,
 			});
-			
-			function loop() {   
+
+			function loop() {
 			    var smile = $(".ft_char13");
 			    if(smile !== undefined && $(smile).attr("style") == "opacity: 1;") {
 			      	if($(smile).text() == ":") {
 			      		$(smile).text(";");
-						setTimeout(loop, 500);
+						setTimeout(loop, 250);
 						return;
 			      	} else {
 			      		$(smile).text(":");
-						setTimeout(loop, 750);
+						setTimeout(loop, 1000);
 						return;
 			      	}
 			    }
