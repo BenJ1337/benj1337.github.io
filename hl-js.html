@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>highlight.js</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/idea.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <style>
+            * {
+                font-size: 24px;
+            }
+            main pre {
+                border: 1px solid #aaa;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <a href="https://highlightjs.org/static/demo/">See more</a>
+            <pre>
+                <code class="java">
+                public class MyClass {
+                    private static final String text = "Hello World";
+
+                    public static void main(String[] args) {
+                        System.out.println(text);
+                    }
+                }
+                </code>
+            </pre>
+            <pre>
+                <code class="html">
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;titel&gt;Hello World&lt;/titel&gt;
+                        &lt;style&gt;
+                            .headline {
+                                font-size: 12px;
+                                border-bottom: 1px solid #222;
+                            }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1 class=&quot;headline&quot;&gt;Hello World&lt;/h1&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </code>
+            </pre>
+        </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightBlock(block);
+                });
+            });
+        </script>
+    </body>
+</html>
